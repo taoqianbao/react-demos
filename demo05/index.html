@@ -6,30 +6,38 @@
     <script src="../build/browser.min.js"></script>
   </head>
   <body>
-    <div id="example"></div>
-    <script type="text/babel">
-      var NotesList = React.createClass({
-        render: function() {
-          return (
-            <ol>
-              {
-                React.Children.map(this.props.children, function (child) {
-                  return <li>{child}</li>;
-                })
-              }
-            </ol>
-          );
-        }
-      });
 
-      ReactDOM.render(
-        <NotesList>
-          <span>hello</span>
-          <span>world</span>
-        </NotesList>,
-        document.getElementById('example')
-      );
+
+    <div>
+      <p>React.Children</p>
+      <p>this.props.children</p>
+    </div>
+
+    <div id="example"></div>
+
+    <script src="index.js" type="text/babel" charset="utf-8"></script>
+    <script type="text/babel">
+      // var NotesList = React.createClass({
+      //   render: function() {
+      //     return (
+      //       <ol>
+      //         {
+      //           React.Children.map(this.props.children, function (child) {
+      //             return <li>{child}</li>;
+      //           })
+      //         }
+      //       </ol>
+      //     );
+      //   }
+      // });
+      //
+      // ReactDOM.render(
+      //   <NotesList>
+      //     <span>hello</span>
+      //     <span>world</span>
+      //   </NotesList>,
+      //   document.getElementById('example')
+      // );
     </script>
   </body>
 </html>
-

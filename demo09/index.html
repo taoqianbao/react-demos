@@ -7,18 +7,27 @@
   </head>
   <body>
     <div id="example"></div>
+
     <script type="text/babel">
+
       var Input = React.createClass({
+
         getInitialState: function() {
           return {value: 'Hello!'};
         },
-        handleChange: function(event) {
+        handleChange: function(event)
+
+          console.log(this.refs.txtUserName.value, "<new , old>", event.target.value);
+
           this.setState({value: event.target.value});
         },
         render: function () {
+
           var value = this.state.value;
+
           return (
             <div>
+              <input ref="txtUserName" type="text" value={value} onChange={this.handleChange} />
               <input type="text" value={value} onChange={this.handleChange} />
               <p>{value}</p>
             </div>

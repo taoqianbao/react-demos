@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+  <head>
+
+    <script src="../build/react-0.13.4.js" charset="utf-8"></script>
+    <script src="../build/JSXTransformer.js" charset="utf-8"></script>
+  <style>
+
+    strong {
+      color: red;
+    }
+
+  </style>
+  </head>
+  <body>
+    <div id="example"></div>
+
+    <script type="text/jsx">
+
+      var node = document.getElementById('example');
+
+      var content = '<strong>content strong </strong>'
+
+      React.render(
+        <div style={{ color: 'blue'}}>
+            <p>
+              hello
+            </p>
+            <div dangerouslySetInnerHTML={{__html: content}}>
+            </div>
+        </div>,
+        node);
+
+    </script>
+
+  </body>
+</html>

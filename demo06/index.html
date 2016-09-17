@@ -6,6 +6,13 @@
     <script src="../build/browser.min.js"></script>
   </head>
   <body>
+
+    <h2>
+      https://facebook.github.io/react/docs/reusable-components.html
+      <span>React.propTypes</span>
+    </h2>
+
+
     <div id="example"></div>
     <script type="text/babel">
 
@@ -15,7 +22,6 @@
         propTypes: {
           title: React.PropTypes.string.isRequired,
         },
-
         render: function() {
           return <h1> {this.props.title} </h1>;
         }
@@ -29,4 +35,3 @@
     </script>
   </body>
 </html>
-
