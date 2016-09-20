@@ -16,16 +16,28 @@
         },
 
         componentDidMount: function () {
+
           this.timer = setInterval(function () {
+
             var opacity = this.state.opacity;
             opacity -= .05;
             if (opacity < 0.1) {
               opacity = 1.0;
             }
+
             this.setState({
               opacity: opacity
             });
+
           }.bind(this), 100);
+
+          //
+          setTimeout(function(){
+            console.log('timeout');
+            clearInterval(this.timer);
+
+          }.bind(this),3000);
+
         },
 
         render: function () {
@@ -34,7 +46,11 @@
               Hello {this.props.name}
             </div>
           );
-        }
+        },
+
+        componentWillUnmount: function() {
+          console.log('componentWillUnmount');
+        },
       });
 
       ReactDOM.render(

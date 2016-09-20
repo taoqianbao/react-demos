@@ -16,7 +16,7 @@
           return {value: 'Hello!'};
         },
         handleChange: function(event)
-
+        {
           console.log(this.refs.txtUserName.value, "<new , old>", event.target.value);
 
           this.setState({value: event.target.value});
